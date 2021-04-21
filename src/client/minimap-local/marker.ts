@@ -61,8 +61,8 @@ export class Marker {
         const clipFrameAbsolutePosition = clipFrame.AbsolutePosition;
         const clipFrameAbsoluteSize = clipFrame.AbsoluteSize;
 
-        let xPos = (map(this.worldPosition.X, -MAP_HALF_STUD_SIZE_X, MAP_HALF_STUD_SIZE_X, 0, 1));
-        let yPos = (map(this.worldPosition.Y, -MAP_HALF_STUD_SIZE_Y, MAP_HALF_STUD_SIZE_Y, 0, 1));
+        let xPos = map(this.worldPosition.X, -MAP_HALF_STUD_SIZE_X, MAP_HALF_STUD_SIZE_X, 0, 1);
+        let yPos = map(this.worldPosition.Y, -MAP_HALF_STUD_SIZE_Y, MAP_HALF_STUD_SIZE_Y, 0, 1);
 
         const markerImageAbsolutePosition = mapImageAbsolutePosition.add(new Vector2(mapImageAbsoluteSize.X * xPos, mapImageAbsoluteSize.Y * yPos));
 
