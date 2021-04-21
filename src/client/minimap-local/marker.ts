@@ -76,8 +76,7 @@ export class Marker {
 
         if (markerImageAbsolutePosition.Y - MARKER_HALF_SIZE < clipFrame.AbsolutePosition.Y) { // If marker is not visible above
             yPos = -((mapImageAbsolutePosition.Y - clipFrameAbsolutePosition.Y) - MARKER_HALF_SIZE) / mapImageAbsoluteSize.Y;
-        }
-        if (markerImageAbsolutePosition.Y + MARKER_HALF_SIZE > clipFrame.AbsolutePosition.Y + clipFrame.AbsoluteSize.Y) { // If marker is not visible below
+        } else if (markerImageAbsolutePosition.Y + MARKER_HALF_SIZE > clipFrame.AbsolutePosition.Y + clipFrame.AbsoluteSize.Y) { // If marker is not visible below
             yPos = -((mapImageAbsolutePosition.Y - (clipFrameAbsolutePosition.Y + clipFrameAbsoluteSize.Y)) + MARKER_HALF_SIZE) / mapImageAbsoluteSize.Y;
         }
 
