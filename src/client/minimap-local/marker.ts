@@ -32,7 +32,7 @@ export class Marker {
     private worldPosition: Vector2;
 
     constructor(markerInstance: BasePart) {
-        const markerPosition = markerInstance.Position;
+        let markerPosition = markerInstance.Position;
 
         const markerImage = markerImagePrefab.Clone();
         markerImage.Image = markerInstance.GetAttribute('Image') as string;
