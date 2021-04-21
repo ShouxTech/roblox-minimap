@@ -44,6 +44,7 @@ export class Marker {
         this.worldPosition = new Vector2(markerPosition.X, markerPosition.Z);
 
         markerInstance.GetPropertyChangedSignal('Position').Connect(() => {
+            markerPosition = markerInstance.Position;
             this.worldPosition = new Vector2(markerPosition.X, markerPosition.Z);
         });
     }
